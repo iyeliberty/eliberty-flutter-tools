@@ -1,5 +1,5 @@
 import 'package:dartz/dartz.dart';
-import 'package:eliberty_toolbox/features/auth/domain/repositories/auth_repo.dart';
+import 'package:eliberty_flutter_tools/features/auth/domain/repositories/auth_repo.dart';
 import '../entities/user.dart';
 import '../../../../core/errors/failures.dart';
 

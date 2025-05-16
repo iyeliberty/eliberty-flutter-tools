@@ -1,13 +1,13 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:eliberty_toolbox/core/errors/failures.dart';
-import 'package:eliberty_toolbox/features/auth/data/models/user_model.dart';
-import 'package:eliberty_toolbox/features/auth/domain/usecases/get_user_from_cache.dart';
-import 'package:eliberty_toolbox/features/auth/domain/usecases/sign_in_with_email.dart';
-import 'package:eliberty_toolbox/features/auth/domain/usecases/sign_out.dart';
-import 'package:eliberty_toolbox/features/auth/errors/auth_failures.dart';
-import 'package:eliberty_toolbox/features/auth/presentation/cubit/auth_cubit.dart';
-import 'package:eliberty_toolbox/features/auth/presentation/cubit/auth_state.dart';
+import 'package:eliberty_flutter_tools/core/errors/failures.dart';
+import 'package:eliberty_flutter_tools/features/auth/data/models/user_model.dart';
+import 'package:eliberty_flutter_tools/features/auth/domain/usecases/get_user_from_cache.dart';
+import 'package:eliberty_flutter_tools/features/auth/domain/usecases/sign_in_with_email.dart';
+import 'package:eliberty_flutter_tools/features/auth/domain/usecases/sign_out.dart';
+import 'package:eliberty_flutter_tools/features/auth/errors/auth_failures.dart';
+import 'package:eliberty_flutter_tools/features/auth/presentation/cubit/auth_cubit.dart';
+import 'package:eliberty_flutter_tools/features/auth/presentation/cubit/auth_state.dart';
 import 'package:mocktail/mocktail.dart';
 
 class MockGetUserFromCache extends Mock implements GetUserFromCache {}

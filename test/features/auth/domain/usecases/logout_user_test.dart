@@ -1,8 +1,8 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:dartz/dartz.dart';
-import 'package:eliberty_toolbox/features/auth/domain/usecases/sign_out.dart';
-import 'package:eliberty_toolbox/features/auth/domain/repositories/auth_repo.dart';
+import 'package:eliberty_flutter_tools/features/auth/domain/usecases/sign_out.dart';
+import 'package:eliberty_flutter_tools/features/auth/domain/repositories/auth_repo.dart';
 
 class MockAuthRepo extends Mock implements AuthRepo {}
 

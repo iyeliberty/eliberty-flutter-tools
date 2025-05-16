@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
-import 'package:eliberty_toolbox/core/errors/failures.dart';
-import 'package:eliberty_toolbox/features/auth/domain/entities/user.dart';
+import 'package:eliberty_flutter_tools/core/errors/failures.dart';
+import 'package:eliberty_flutter_tools/features/auth/domain/entities/user.dart';
 
 abstract class AuthRepo {
   Future<Either<Failure, User>> getUserFromCache();

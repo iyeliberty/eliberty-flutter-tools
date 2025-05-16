@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:eliberty_toolbox/features/auth/presentation/pages/initialisation_page.dart';
-import 'package:eliberty_toolbox/features/auth/presentation/pages/home_page.dart';
-import 'package:eliberty_toolbox/features/auth/presentation/pages/login_page.dart';
-import 'package:eliberty_toolbox/features/auth/presentation/cubit/auth_cubit.dart';
-import 'package:eliberty_toolbox/features/auth/presentation/cubit/auth_state.dart';
-import 'package:eliberty_toolbox/features/auth/domain/entities/user.dart';
+import 'package:eliberty_flutter_tools/features/auth/presentation/pages/initialisation_page.dart';
+import 'package:eliberty_flutter_tools/features/auth/presentation/pages/home_page.dart';
+import 'package:eliberty_flutter_tools/features/auth/presentation/pages/login_page.dart';
+import 'package:eliberty_flutter_tools/features/auth/presentation/cubit/auth_cubit.dart';
+import 'package:eliberty_flutter_tools/features/auth/presentation/cubit/auth_state.dart';
+import 'package:eliberty_flutter_tools/features/auth/domain/entities/user.dart';
 
 class MockAuthCubit extends Mock implements AuthCubit {}
 

@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:eliberty_toolbox/features/auth/data/models/user_model.dart';
+import 'package:eliberty_flutter_tools/features/auth/data/models/user_model.dart';
 
 void main() {
   const userModel = UserModel(

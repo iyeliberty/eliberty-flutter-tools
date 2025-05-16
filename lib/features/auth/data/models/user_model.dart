@@ -1,4 +1,4 @@
-import 'package:eliberty_toolbox/features/auth/domain/entities/user.dart';
+import 'package:eliberty_flutter_tools/features/auth/domain/entities/user.dart';
 
 import '../../../../core/storage/storable_model.dart';
 

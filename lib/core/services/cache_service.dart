@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:eliberty_toolbox/core/storage/storable_model.dart';
+import 'package:eliberty_flutter_tools/core/storage/storable_model.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class CacheService {

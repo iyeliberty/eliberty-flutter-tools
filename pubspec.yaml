@@ -1,7 +1,7 @@
-name: eliberty_toolbox
+name: eliberty_flutter_tools
 description: "A new Flutter package project."
 version: 0.0.1
-homepage: git.com:eliberty/eliberty_toolbox
+homepage: git.com:eliberty/eliberty_flutter_tools
 
 environment:
   sdk: ^3.7.2

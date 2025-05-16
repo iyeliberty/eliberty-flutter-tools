@@ -1,11 +1,11 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:eliberty_toolbox/core/errors/failures.dart';
-import 'package:eliberty_toolbox/features/auth/data/datasources/auth_local_ds.dart';
-import 'package:eliberty_toolbox/features/auth/data/datasources/auth_remote_ds.dart';
-import 'package:eliberty_toolbox/features/auth/data/models/user_model.dart';
-import 'package:eliberty_toolbox/features/auth/data/repositories/auth_repo_impl.dart';
-import 'package:eliberty_toolbox/features/auth/errors/auth_failures.dart';
+import 'package:eliberty_flutter_tools/core/errors/failures.dart';
+import 'package:eliberty_flutter_tools/features/auth/data/datasources/auth_local_ds.dart';
+import 'package:eliberty_flutter_tools/features/auth/data/datasources/auth_remote_ds.dart';
+import 'package:eliberty_flutter_tools/features/auth/data/models/user_model.dart';
+import 'package:eliberty_flutter_tools/features/auth/data/repositories/auth_repo_impl.dart';
+import 'package:eliberty_flutter_tools/features/auth/errors/auth_failures.dart';
 import 'package:mocktail/mocktail.dart';
 
 class MockAuthLocalDatasource extends Mock implements AuthLocalDatasource {}

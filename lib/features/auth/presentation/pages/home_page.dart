@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:eliberty_toolbox/features/auth/presentation/cubit/auth_cubit.dart';
+import 'package:eliberty_flutter_tools/features/auth/presentation/cubit/auth_cubit.dart';
 
 import '../../domain/entities/user.dart';
 

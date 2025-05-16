@@ -1,6 +1,6 @@
-import 'package:eliberty_toolbox/features/auth/data/datasources/auth_local_ds.dart';
-import 'package:eliberty_toolbox/features/auth/data/datasources/auth_remote_ds.dart';
-import 'package:eliberty_toolbox/features/auth/domain/usecases/sign_out.dart';
+import 'package:eliberty_flutter_tools/features/auth/data/datasources/auth_local_ds.dart';
+import 'package:eliberty_flutter_tools/features/auth/data/datasources/auth_remote_ds.dart';
+import 'package:eliberty_flutter_tools/features/auth/domain/usecases/sign_out.dart';
 import 'package:get_it/get_it.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 

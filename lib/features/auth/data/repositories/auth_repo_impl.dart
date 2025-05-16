@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
-import 'package:eliberty_toolbox/features/auth/data/datasources/auth_local_ds.dart';
-import 'package:eliberty_toolbox/features/auth/data/datasources/auth_remote_ds.dart';
+import 'package:eliberty_flutter_tools/features/auth/data/datasources/auth_local_ds.dart';
+import 'package:eliberty_flutter_tools/features/auth/data/datasources/auth_remote_ds.dart';
 import '../../domain/entities/user.dart';
 import '../../domain/repositories/auth_repo.dart';
 import '../../../../core/errors/failures.dart';

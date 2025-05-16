@@ -1,5 +1,5 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:eliberty_toolbox/features/auth/domain/usecases/sign_out.dart';
+import 'package:eliberty_flutter_tools/features/auth/domain/usecases/sign_out.dart';
 import '../../domain/usecases/get_user_from_cache.dart';
 import '../../domain/usecases/sign_in_with_email.dart';
 import 'auth_state.dart';
