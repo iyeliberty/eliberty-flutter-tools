@@ -24,9 +24,13 @@ class AuthCubit extends Cubit<AuthState> {
     );
   }
 
-  Future<void> login(String email, String password) async {
+  Future<void> login(String email, String password, String endpoint) async {
     emit(AuthLoading());
-    final result = await loginUser(email, password);
+    final result = await loginUser(
+      email: email,
+      password: password,
+      endpoint: endpoint,
+    );
     result.fold(
       (failure) => emit(AuthError(failure.message)),
       (user) => emit(AuthAuthenticated(user)),

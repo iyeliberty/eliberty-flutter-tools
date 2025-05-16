@@ -8,7 +8,11 @@ class SignInWithEmail {
 
   SignInWithEmail(this.repository);
 
-  Future<Either<Failure, User>> call(String email, String password) async {
-    return repository.signInWithEmail(email, password);
+  Future<Either<Failure, User>> call({
+    required String email,
+    required String password,
+    required String endpoint,
+  }) async {
+    return repository.signInWithEmail(email, password, endpoint);
   }
 }

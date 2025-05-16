@@ -20,7 +20,7 @@ class _LoginPageState extends State<LoginPage> {
     if (_formKey.currentState!.validate()) {
       final email = _emailController.text.trim();
       final password = _passwordController.text.trim();
-      context.read<AuthCubit>().login(email, password);
+      context.read<AuthCubit>().login(email, password, 'endpoint');
     }
   }
 

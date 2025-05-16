@@ -26,9 +26,10 @@ class AuthRepoImpl implements AuthRepo {
   Future<Either<Failure, User>> signInWithEmail(
     String email,
     String password,
+    String endpoint,
   ) async {
     try {
-      final user = await remoteDatasource.login(email, password);
+      final user = await remoteDatasource.login(email, password, endpoint);
       await localDatasource.cacheUser(user);
       return Right(user);
     } catch (e) {
