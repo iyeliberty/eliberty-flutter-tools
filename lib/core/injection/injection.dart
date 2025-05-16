@@ -13,7 +13,7 @@ import '../services/cache_service.dart';
 
 final sl = GetIt.instance;
 
-Future<void> init() async {
+Future<void> initElibertyFlutterTools() async {
   // External
   final sharedPreferences = await SharedPreferences.getInstance();
   sl.registerLazySingleton(() => CacheService(sharedPreferences));
