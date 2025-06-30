@@ -13,6 +13,7 @@ void main() {
 
   const testEmail = 'test@example.com';
   const testPassword = 'password';
+  const testEndpoint = 'endpoint';
   const testUser = UserModel(id: 'abc123', name: 'Patrick', email: testEmail);
 
   setUp(() {
@@ -25,16 +26,20 @@ void main() {
   test('should call AuthRepo.login and return User', () async {
     // arrange
     when(
-      () => mockAuthRepo.signInWithEmail(testEmail, testPassword),
+      () => mockAuthRepo.signInWithEmail(testEmail, testPassword, testEndpoint),
     ).thenAnswer((_) async => Right(testUser));
 
     // act
-    final result = await usecase(testEmail, testPassword);
+    final result = await usecase(
+      email: testEmail,
+      password: testPassword,
+      endpoint: testEndpoint,
+    );
 
     // assert
     expect(result, equals(Right(testUser)));
     verify(
-      () => mockAuthRepo.signInWithEmail(testEmail, testPassword),
+      () => mockAuthRepo.signInWithEmail(testEmail, testPassword, testEndpoint),
     ).called(1);
   });
 }

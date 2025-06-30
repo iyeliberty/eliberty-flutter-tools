@@ -40,33 +40,44 @@ void main() {
   group('login', () {
     const email = 'test@example.com';
     const password = 'password';
+    const endpoint = 'endpoint';
 
     test('should return User on successful login', () async {
       // arrange
       when(
-        () => mockRemoteDatasource.login(email, password),
+        () => mockRemoteDatasource.login(email, password, endpoint),
       ).thenAnswer((_) async => testUserModel);
       when(
         () => mockLocalDatasource.cacheUser(testUserModel),
       ).thenAnswer((_) async => {});
 
       // act
-      final result = await repository.signInWithEmail(email, password);
+      final result = await repository.signInWithEmail(
+        email,
+        password,
+        endpoint,
+      );
 
       // assert
       expect(result, equals(Right(testUserModel)));
-      verify(() => mockRemoteDatasource.login(email, password)).called(1);
+      verify(
+        () => mockRemoteDatasource.login(email, password, endpoint),
+      ).called(1);
       verify(() => mockLocalDatasource.cacheUser(testUserModel)).called(1);
     });
 
     test('should return InvalidCredentialsFailure on failed login', () async {
       // arrange
       when(
-        () => mockRemoteDatasource.login(email, password),
+        () => mockRemoteDatasource.login(email, password, endpoint),
       ).thenThrow(Exception('Invalid credentials'));
 
       // act
-      final result = await repository.signInWithEmail(email, password);
+      final result = await repository.signInWithEmail(
+        email,
+        password,
+        endpoint,
+      );
 
       // assert
       expect(result.isLeft(), true);
@@ -74,7 +85,9 @@ void main() {
         (failure) => expect(failure, isA<InvalidCredentialsFailure>()),
         (_) => fail('Expected a failure, got success'),
       );
-      verify(() => mockRemoteDatasource.login(email, password)).called(1);
+      verify(
+        () => mockRemoteDatasource.login(email, password, endpoint),
+      ).called(1);
       verifyNever(() => mockLocalDatasource.cacheUser(any()));
     });
   });
@@ -146,5 +159,3 @@ void main() {
     });
   });
 }
-
-// The above code is a test suite for the AuthRepoImpl class, which implements the AuthRepo interface.

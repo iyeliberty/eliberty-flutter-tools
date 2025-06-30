@@ -79,29 +79,32 @@ void main() {
   group('login', () {
     const email = 'test@example.com';
     const password = 'password';
+    const endpoint = 'endpoint';
 
     test('should emit [AuthLoading, AuthAuthenticated] on success', () async {
       when(
-        () => mockLoginUser(email, password),
+        () =>
+            mockLoginUser(email: email, password: password, endpoint: endpoint),
       ).thenAnswer((_) async => Right(testUser));
 
       final expected = [isA<AuthLoading>(), isA<AuthAuthenticated>()];
 
       expectLater(authCubit.stream, emitsInOrder(expected));
 
-      authCubit.login(email, password);
+      authCubit.login(email, password, endpoint);
     });
 
     test('should emit [AuthLoading, AuthError] on failure', () async {
       when(
-        () => mockLoginUser(email, password),
+        () =>
+            mockLoginUser(email: email, password: password, endpoint: endpoint),
       ).thenAnswer((_) async => Left(InvalidCredentialsFailure()));
 
       final expected = [isA<AuthLoading>(), isA<AuthError>()];
 
       expectLater(authCubit.stream, emitsInOrder(expected));
 
-      authCubit.login(email, password);
+      authCubit.login(email, password, endpoint);
     });
   });
 
