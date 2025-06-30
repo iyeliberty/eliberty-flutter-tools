@@ -1,10 +1,10 @@
 name: eliberty_flutter_tools
 description: "A new Flutter package project."
-version: 0.0.1
+version: 0.0.2
 homepage: git.com:eliberty/eliberty_flutter_tools
 
 environment:
-  sdk: ^3.7.2
+  sdk: ^3.32.5
   flutter: ">=1.17.0"
 
 dependencies:
